@@ -1,0 +1,26 @@
+{
+  "name": "js-pagination-sequence-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild --loader:.js=jsx src/app.js --bundle --outfile=demo/bundle.js",
+    "watch": "sane 'npm run build' --glob=src/*",
+    "serve": "live-server demo --no-browser",
+    "start": "concurrently 'npm run watch' 'npm run serve'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bramus/pagination-sequence": "^1.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "esbuild": "^0.14.3",
+    "live-server": "^1.2.1",
+    "sane": "^5.0.1"
+  }
+}
